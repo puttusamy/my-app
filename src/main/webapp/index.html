@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Excellent HTML Website</title>
+    <title>Your Latest HTML Website</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -91,6 +91,17 @@
             text-align: center;
         }
 
+        .animate-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         footer {
             background-color: #343a40;
             color: #fff;
@@ -102,7 +113,7 @@
 <body>
 
 <header>
-    <h1>Your Excellent HTML Website</h1>
+    <h1>Your Latest HTML Website</h1>
 </header>
 
 <nav>
@@ -117,30 +128,48 @@
 <main>
 
     <section id="home" class="hero">
-        <h2>Welcome to Your Excellent HTML Website</h2>
-        <p>This is a modern and attractive HTML template. Customize it to showcase your content beautifully.</p>
+        <h2 class="animate-up">Welcome to Your Latest HTML Website</h2>
+        <p class="animate-up">This is a modern and attractive HTML template. Customize it to showcase your content beautifully.</p>
     </section>
 
-    <section id="about" class="about">
+    <section id="about" class="about animate-up">
         <h2>About Us</h2>
         <p>We are a passionate team dedicated to delivering excellence in every project.</p>
     </section>
 
-    <section id="services" class="services">
+    <section id="services" class="services animate-up">
         <h2>Our Services</h2>
         <p>Explore our range of services designed to meet your needs.</p>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact animate-up">
         <h2>Contact Us</h2>
-        <p>Reach out to us at contact@yourexcellentwebsite.com.</p>
+        <p>Reach out to us at contact@yourlatestwebsite.com.</p>
     </section>
 
 </main>
 
 <footer>
-    <p>&copy; 2023 Your Excellent HTML Website. All rights reserved.</p>
+    <p>&copy; 2023 Your Latest HTML Website. All rights reserved.</p>
 </footer>
+
+<script>
+    window.addEventListener('scroll', revealOnScroll);
+
+    function revealOnScroll() {
+        var reveals = document.querySelectorAll('.animate-up');
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 50;
+
+            if (revealTop < windowHeight - revealPoint) {
+                reveals[i].classList.add('visible');
+            }
+        }
+    }
+</script>
 
 </body>
 </html>
