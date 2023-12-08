@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Page Title</title>
-  <!-- Add your CSS styles or external stylesheet links here -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-  <h1>Your Website Name</h1>
+    <div class="container">
+        <h1>Your Website Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<div class="container">
-  <h2>Welcome to Your Website</h2>
-  <p>This is a sample HTML template. Modify it as needed for your content.</p>
-</div>
+<main>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Your Website</h2>
+            <p>This is a sample HTML template. Modify it as needed for your content.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a creative team dedicated to building awesome websites.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Web Design</li>
+                <li>Graphic Design</li>
+                <li>SEO Optimization</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Reach out to us at contact@yourwebsite.com.</p>
+        </div>
+    </section>
+</main>
 
 <footer>
-  &copy; 2023 Your Website Name. All rights reserved.
+    <div class="container">
+        <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+    </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
